@@ -1,0 +1,42 @@
+.disable-user-select {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.disable-cursor:not(:disabled) {
+  cursor: not-allowed;
+}
+
+.red-hat {
+  font-family: "Red Hat Mono";
+}
+
+.selectionBtn {
+  transition: all 0.1s ease-in-out;
+}
+
+.selectionBtn:hover {
+  transform: scale(1.4);
+  transition: all 0.1s ease-in-out;
+}
+
+.computer-choice {
+  animation: enlarge 1.5s ease-in-out;
+}
+
+@keyframes enlarge {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
