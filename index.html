@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .computer-choice {
+        user-select: none; /* supported by Chrome and Opera */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+      }
+
+      .disable-cursor:not(:disabled) {
+        cursor: not-allowed;
+      }
+
+      .red-hat {
+        font-family: "Red Hat Mono";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-lg text-center">
+      <h1 class="display-3 mt-md-5 mt-3 mb-4 red-hat">Choose your weapon</h1>
+      <div class="row display-1 justify-content-center my-md-5">
+        <div class="col-md-3">
+          <button class="border-0 rounded bg-transparent mb-3">🪨</button>
+        </div>
+        <div class="col-md-3">
+          <button class="border-0 rounded bg-transparent mb-3">📃</button>
+        </div>
+        <div class="col-md-3">
+          <button class="border-0 rounded bg-transparent">✂️</button>
+        </div>
+      </div>
+
+      <div class="computer-choice mb-5">
+        <h1 class="display-3 my-4 red-hat">Computer Chose</h1>
+        <div class="row display-1 justify-content-center my-md-5">
+          <div class="col-md-3">
+            <button class="border-0 rounded bg-transparent mb-3 disable-cursor">
+              🪨
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button class="border-0 rounded bg-transparent mb-3 disable-cursor">
+              📃
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button class="border-0 rounded bg-transparent disable-cursor">
+              ✂️
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-xxl text-center">
+      <h1 class="display-3 red-hat mt-5 pt-md-3">Score</h1>
+      <h2 class="display-4 my-5 red-hat">First to 5</h2>
+      <div class="row display-6 my-5">
+        <div class="col red-hat">Player: <span id="playerScore">0</span></div>
+        <div class="col red-hat">
+          Computer: <span id="computerScore">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg text-center">
+      <h1 class="display-5 red-hat mt-5 pt-md-5 d-none">
+        😢 Sorry, The Computer Won
+      </h1>
+      <h1 class="display-5 red-hat mt-5 pt-md-5 d-none">
+        🎉 Congratulations, You Won
+      </h1>
+      <button
+        type="button"
+        class="btn btn-lg my-4 my-md-5 btn-primary red-hat d-none"
+      >
+        Play Again
+      </button>
+    </div>
+  </body>
+</html>
